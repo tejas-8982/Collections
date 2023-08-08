@@ -1,0 +1,15 @@
+.bg{
+  background-image: linear-gradient(to bottom right,#ED9CC7,#BCCDFB );
+  height:250px;
+  margin:20px;
+  border-radius: 20px;
+}
+
+.card{
+  color: black;
+  margin: 20px;
+  background-color: white;
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+}
