@@ -39,7 +39,7 @@ const NftCard: React.FC = (props:any) => {
             
           </div>
         ))
-
+        
       }
     </div>
   </div>
