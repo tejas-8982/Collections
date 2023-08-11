@@ -1,5 +1,5 @@
 .bg{
-  background-image: linear-gradient(to bottom right,#ED9CC7,#BCCDFB );
+ background-color: #272A2D;
   height:250px;
   margin:20px;
   border-radius: 20px;
@@ -13,3 +13,47 @@
   height: 300px;
   border-radius: 10px;
 }
+.bg img{
+  padding: 15px;
+  padding-top: 175px;
+  height:100px;
+  width:100px;
+  border-radius: 25px;
+}
+
+.linkStyle{
+text-decoration: none;
+}
+
+.container{
+  padding: 20px;
+}
+.container h2{
+  font-weight: bolder;
+}
+
+.card{
+  display: flex;
+  flex-direction: row;
+}
+.des{
+  width: 800px;
+}
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Adjust as needed */
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Each row will have 5 columns */
+  gap: 10px; /* Adjust the gap between cards */
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+

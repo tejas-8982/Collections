@@ -18,15 +18,21 @@ export default function NftPage({params}:any){
     return(
         <div>
             
-            <div className={styles.bg}></div>
+            <div className={styles.bg}>
+            <img src={collectionData.meta?.content[0]?.url} alt={collectionData.name} />
+
+            </div>
+           <div className={styles.container}>
             <h2 >{collectionData.name}</h2>
             <div>
                 <p>owner:{collectionData.owner}</p>
             </div>
-            <div>
-                <p>{collectionData.meta?.description}</p>
-               
+            <div className={styles.des}>
+                <p>{collectionData.meta?.description}</p>  
             </div>
+
+            </div>
+           <NftCard tokenId={collectionData.id}/>
         </div>
     );
 }
