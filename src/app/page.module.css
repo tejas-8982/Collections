@@ -6,12 +6,13 @@
 }
 
 .card{
-  color: black;
+  color: white;
   margin: 20px;
-  background-color: white;
-  width: 200px;
+  background-color:  black;
+  width: 250px;
   height: 300px;
   border-radius: 10px;
+  border: #3a3a3a;
 }
 .bg img{
   padding: 15px;
@@ -43,17 +44,39 @@ text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Adjust as needed */
+  min-height: 100vh;
+  
 }
 
 .cardContainer {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Each row will have 5 columns */
-  gap: 10px; /* Adjust the gap between cards */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; 
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #ccc;
   padding: 10px;
+  text-align: center;
 }
 
+.imageContainer {
+  width: 250px;
+  height: 250px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; 
+}
+
+.imageContainer img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.metaData {
+  margin-top: 10px;
+}

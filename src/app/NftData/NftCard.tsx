@@ -30,11 +30,16 @@ const NftCard: React.FC = (props:any) => {
       {
         nftList?.map((nft, key) => (
           <div className={styles.card} key={key}>
-            <div className={styles.image}>
-              
+            <div className={styles.imageContainer}>
+              <img src={nft.meta?.content[0]?.url} alt={nft.meta?.name}/>
             </div>
+            <div className={styles.metaData}>
+            <p>{nft.meta?.name}</p>
+            </div>
+            
           </div>
         ))
+
       }
     </div>
   </div>
