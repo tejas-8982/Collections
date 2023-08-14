@@ -3,9 +3,16 @@ import styles from '../page.module.css'
 
 
 async function listofNft(tokenId:string) {
-  const response = await fetch(`https://api.rarible.org/v0.1/items/byCollection?collection=${tokenId}`);
+  const apiKey = "ba2c6614-394c-44c5-b25b-585508c18501";
+  const response = await fetch(`https://api.rarible.org/v0.1/items/byCollection?collection=${tokenId}`,{
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      "X-API-KEY": apiKey,
+    },
+  });
   const nftDataJSON = await response.json();
-  return nftDataJSON.items; 
+  return nftDataJSON.items;  
 }
 
 const NftCard: React.FC = (props:any) => {
@@ -22,7 +29,7 @@ const NftCard: React.FC = (props:any) => {
       console.log(nftList);
     }
     fetchData();
-  },[])
+  },[tokenId])
 
   return (
     <div className={styles.container2}>
@@ -39,7 +46,6 @@ const NftCard: React.FC = (props:any) => {
             
           </div>
         ))
-        
       }
     </div>
   </div>

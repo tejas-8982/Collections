@@ -19,7 +19,15 @@ type NFTData = {
 
 async function listAvailableTokens() {
   console.log('initializing');
-  let response = await fetch('https://api.rarible.org/v0.1/collections/all');
+  const apiKey = "ba2c6614-394c-44c5-b25b-585508c18501";
+  let response = await fetch('https://api.rarible.org/v0.1/collections/all',{
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      "X-API-KEY": apiKey,
+    },
+
+  });
   let tokenListJSON = await response.json();
   console.log('listing available tokens: ', tokenListJSON);
   return tokenListJSON.collections;
@@ -49,7 +57,7 @@ export default function BasicTable() {
         </TableHead>
 
         <TableBody className={styles.tablebody}>    
-          {tokenData.map((row,key) => (
+          {tokenData?.map((row,key) => (
             <TableRow
               key={row?.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
